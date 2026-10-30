@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Users Dataset",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "email", "age"],
+    "properties": {
+      "id": { "type": "integer", "minimum": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "email": { "type": "string", "format": "email" },
+      "age": { "type": "integer", "minimum": 0, "maximum": 120 }
+    },
+    "additionalProperties": false
+  },
+  "minItems": 1
+}
